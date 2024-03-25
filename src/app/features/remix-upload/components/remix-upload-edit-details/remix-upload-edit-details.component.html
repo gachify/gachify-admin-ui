@@ -1,0 +1,38 @@
+@if (isLoadingDetails()) {
+  <h3>Loading...</h3>
+} @else {
+  <form
+    [formGroup]="form"
+    autocomplete="off"
+  >
+    <fieldset>
+      <label for="title">Title</label>
+
+      <input
+        formControlName="title"
+        id="title"
+        type="text"
+      />
+
+      <gachi-control-error controlName="title" />
+    </fieldset>
+
+    <fieldset>
+      <label for="duration">Duration</label>
+
+      <input
+        formControlName="duration"
+        id="duration"
+        type="text"
+      />
+
+      <gachi-control-error controlName="duration" />
+    </fieldset>
+
+    <section>
+      <button (click)="handleBack()">Back</button>
+
+      <button (click)="handleNext()">Next</button>
+    </section>
+  </form>
+}

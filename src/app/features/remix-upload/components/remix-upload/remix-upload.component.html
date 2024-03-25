@@ -1,0 +1,16 @@
+<h1>Remix upload</h1>
+
+@switch (currentTab()) {
+  @case (tabs.SELECT_SOURCE) {
+    <gachi-remix-upload-select-source />
+  }
+  @case (tabs.EDIT_DETAILS) {
+    <gachi-remix-upload-edit-details />
+  }
+  @case (tabs.REVIEW_DETAILS) {
+    review
+  }
+  @default {
+    <gachi-remix-upload-select-source />
+  }
+}
